@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Zensos.Helper;
 
 namespace Zensos
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmMain());
+
+            return;
+
             TSchueler SEintrag = new TSchueler(
                 2015 // Aufnahmejahr
                 , 2023 // Abschlussjahrgang
@@ -25,7 +33,10 @@ namespace Zensos
 
             try
             {
+                Console.WriteLine("Reading Excel file...");
                 ExcelHelper excel = new ExcelHelper("C:\\Users\\Adrian\\source\\repos\\Geilokowski\\Zensos\\Zensos\\Zensos\\SchuelerGymnasium.xls");
+                Console.WriteLine("File successfully read...");
+
                 Console.WriteLine("Cell 0/0: " + excel.ReadCell(0, 0, 0));
                 Console.WriteLine("Total of " + excel.getRowCount(0) + " rows found");
 

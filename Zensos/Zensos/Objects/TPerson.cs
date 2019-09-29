@@ -43,7 +43,7 @@ namespace Zensos
             return JahresDifferenz;
         }
 
-        internal string CheckNameString(string name)
+        public static string CheckNameString(string name)
         {
             Char[] Separatoren = { ' ', '-' };
             var ForbiddenChar = new List<String> { "ä", "ö", "ü", "ß", "á", "é", "ó" };
