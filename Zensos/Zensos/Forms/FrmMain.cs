@@ -36,7 +36,7 @@ namespace Zensos
         {
             List<TSchueler> studentList = new List<TSchueler>();
             TSchueler SEintrag = new TSchueler(
-                2015 // Aufnahmejahr
+                2016 // Aufnahmejahr
                 , 2023 // Abschlussjahrgang
                 , "JG16s" // Jahrgang KZ
                 , "10s" // Klasse
@@ -52,7 +52,7 @@ namespace Zensos
                 2015 // Aufnahmejahr
                 , 2023 // Abschlussjahrgang
                 , "JG15LuR2" // Jahrgang KZ
-                , "10s" // Klasse
+                , "11-LuR2" // Klasse
                 , "Adrian Lübke" // Geburtsname
                 , "Lübke" // Name
                 , "Adrian" // Vorname
@@ -62,10 +62,10 @@ namespace Zensos
             studentList.Add(SEintrag);
 
             SEintrag = new TSchueler(
-                2015 // Aufnahmejahr
+                2019 // Aufnahmejahr
                 , 2023 // Abschlussjahrgang
-                , "JG15LuR" // Jahrgang KZ
-                , "11-LuR2" // Klasse
+                , "JG19b" // Jahrgang KZ
+                , "7b" // Klasse
                 , "Phillip" // Geburtsname
                 , "Goose" // Name
                 , "Philippine" // Vorname
@@ -75,10 +75,10 @@ namespace Zensos
             studentList.Add(SEintrag);
 
             SEintrag = new TSchueler(
-                2015 // Aufnahmejahr
+                2014 // Aufnahmejahr
                 , 2023 // Abschlussjahrgang
-                , "JG16b" // Jahrgang KZ
-                , "11-LuR" // Klasse
+                , "JG14WuN" // Jahrgang KZ
+                , "12-WuN" // Klasse
                 , "Eric Runge" // Geburtsname
                 , "Eric" // Name
                 , "Runge" // Vorname
@@ -88,10 +88,10 @@ namespace Zensos
             studentList.Add(SEintrag);
 
             SEintrag = new TSchueler(
-                2015 // Aufnahmejahr
+                2019 // Aufnahmejahr
                 , 2023 // Abschlussjahrgang
-                , "JG15s" // Jahrgang KZ
-                , "11-LuR" // Klasse
+                , "JG19s" // Jahrgang KZ
+                , "7s" // Klasse
                 , "Johann Goose" // Geburtsname
                 , "Goose" // Name
                 , "Johann" // Vorname

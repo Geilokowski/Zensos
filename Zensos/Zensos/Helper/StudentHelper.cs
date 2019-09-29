@@ -48,7 +48,7 @@ namespace Zensos.Helper
                 else
                     beginnYear = StichTag.Year - timeOnGym;
 
-                returnList.Add(beginnYear.ToString());
+                returnList.Add("JG" + beginnYear.ToString().Substring(2) + studentClass.GetKZ());
             }
 
             return returnList;
