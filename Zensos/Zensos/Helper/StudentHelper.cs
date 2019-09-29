@@ -30,5 +30,28 @@ namespace Zensos.Helper
 
             return KZList;
         }
+
+        public static List<String> getJGKZsForClass(List<TSchueler> students)
+        {
+            DateTime StichTag = DateTime.Parse("01.08." + DateTime.Now.Year.ToString());
+            DateTime ADatum = DateTime.Now;
+            List<string> returnList = new List<string>();
+
+            foreach(TSchueler student in students)
+            {
+                TClass studentClass = new TClass(student.Klasse);
+                int timeOnGym = studentClass.getClass() - 6;
+                int beginnYear = 0;
+
+                if (ADatum > StichTag)
+                    beginnYear = StichTag.Year - timeOnGym + 1;
+                else
+                    beginnYear = StichTag.Year - timeOnGym;
+
+                returnList.Add(beginnYear.ToString());
+            }
+
+            return returnList;
+        }
     }
 }

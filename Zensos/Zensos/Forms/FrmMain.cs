@@ -159,5 +159,11 @@ namespace Zensos
             Console.WriteLine("The following students exist: ");
             ConsoleHelper.OutputStudents(_StudentList);
         }
+
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Generating JGKZ From Classes: ");
+            ConsoleHelper.OutputJGKZWithClass(_StudentList, StudentHelper.getJGKZsForClass(_StudentList));
+        }
     }
 }

@@ -39,6 +39,7 @@
             this.btnSortAfterName = new System.Windows.Forms.Button();
             this.btnSortAfterClassAndName = new System.Windows.Forms.Button();
             this.btnOutputStudents = new System.Windows.Forms.Button();
+            this.btnAssign = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpenFile
@@ -90,7 +91,7 @@
             // 
             // btnSortAfterClass
             // 
-            this.btnSortAfterClass.Location = new System.Drawing.Point(12, 157);
+            this.btnSortAfterClass.Location = new System.Drawing.Point(12, 186);
             this.btnSortAfterClass.Name = "btnSortAfterClass";
             this.btnSortAfterClass.Size = new System.Drawing.Size(458, 23);
             this.btnSortAfterClass.TabIndex = 6;
@@ -100,17 +101,17 @@
             // 
             // btnSortAfterJGKZ
             // 
-            this.btnSortAfterJGKZ.Location = new System.Drawing.Point(12, 186);
+            this.btnSortAfterJGKZ.Location = new System.Drawing.Point(12, 215);
             this.btnSortAfterJGKZ.Name = "btnSortAfterJGKZ";
             this.btnSortAfterJGKZ.Size = new System.Drawing.Size(458, 23);
             this.btnSortAfterJGKZ.TabIndex = 7;
-            this.btnSortAfterJGKZ.Text = "Sort students after JGJKZ";
+            this.btnSortAfterJGKZ.Text = "Sort students after JGKZ";
             this.btnSortAfterJGKZ.UseVisualStyleBackColor = true;
             this.btnSortAfterJGKZ.Click += new System.EventHandler(this.btnSortAfterJGKZ_Click);
             // 
             // btnSortAfterName
             // 
-            this.btnSortAfterName.Location = new System.Drawing.Point(12, 215);
+            this.btnSortAfterName.Location = new System.Drawing.Point(12, 244);
             this.btnSortAfterName.Name = "btnSortAfterName";
             this.btnSortAfterName.Size = new System.Drawing.Size(458, 23);
             this.btnSortAfterName.TabIndex = 8;
@@ -120,7 +121,7 @@
             // 
             // btnSortAfterClassAndName
             // 
-            this.btnSortAfterClassAndName.Location = new System.Drawing.Point(12, 244);
+            this.btnSortAfterClassAndName.Location = new System.Drawing.Point(12, 273);
             this.btnSortAfterClassAndName.Name = "btnSortAfterClassAndName";
             this.btnSortAfterClassAndName.Size = new System.Drawing.Size(458, 23);
             this.btnSortAfterClassAndName.TabIndex = 9;
@@ -138,11 +139,22 @@
             this.btnOutputStudents.UseVisualStyleBackColor = true;
             this.btnOutputStudents.Click += new System.EventHandler(this.btnOutputStudents_Click);
             // 
+            // btnAssign
+            // 
+            this.btnAssign.Location = new System.Drawing.Point(12, 157);
+            this.btnAssign.Name = "btnAssign";
+            this.btnAssign.Size = new System.Drawing.Size(458, 23);
+            this.btnAssign.TabIndex = 11;
+            this.btnAssign.Text = "Assign Class JGKZ";
+            this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 277);
+            this.ClientSize = new System.Drawing.Size(482, 304);
+            this.Controls.Add(this.btnAssign);
             this.Controls.Add(this.btnOutputStudents);
             this.Controls.Add(this.btnSortAfterClassAndName);
             this.Controls.Add(this.btnSortAfterName);
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Button btnSortAfterName;
         private System.Windows.Forms.Button btnSortAfterClassAndName;
         private System.Windows.Forms.Button btnOutputStudents;
+        private System.Windows.Forms.Button btnAssign;
     }
 }

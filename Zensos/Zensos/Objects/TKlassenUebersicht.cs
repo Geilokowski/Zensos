@@ -51,7 +51,7 @@ namespace Zensos
             {
                 ReferenzJahr = StichTag.Year;
                 AktuellesSchuljahr = ReferenzJahr.ToString() + "/" + StichTag.AddYears(1).Year.ToString();
-            };
+            }
 
             Klassenstufe5 = new List<String> { "5s" };
             Klassenstufe6 = new List<String> { "6s" };

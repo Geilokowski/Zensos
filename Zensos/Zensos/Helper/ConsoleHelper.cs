@@ -107,14 +107,49 @@ namespace Zensos.Helper
             return longest;
         }
 
+        private static int GetLongestNameLenght(List<string> list)
+        {
+            int longest = 0;
+            foreach (string str in list)
+            {
+                if (longest < (str.Length))
+                    longest = (str.Length);
+            }
+
+            return longest;
+        }
+
         public static void OutputStudents(List<TSchueler> list)
         {
+            List<string> tmp = generateStrForJGKZ(list);
             for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine(OutputStr((i + 1) + ". " + list[i].Vorname + " " + list[i].Name, GetLongestNameLenghtPlusPrefix(list)) + " [" + list[i].Klasse + "] [" + list[i].JahrgangKZ + "]");
+                Console.WriteLine(OutputStr(tmp[i], GetLongestNameLenght(tmp)) + " [" + list[i].JahrgangKZ + "]");
             }
 
             Console.WriteLine();
+        }
+
+        public static void OutputJGKZWithClass(List<TSchueler> list, List<string> strList)
+        {
+            List<string> tmp = generateStrForJGKZ(list);
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(OutputStr(tmp[i], GetLongestNameLenght(tmp)) + " --> " + "[" + strList[i] + "]");
+            }
+
+            Console.WriteLine();
+        }
+
+        public static List<string> generateStrForJGKZ(List<TSchueler> list)
+        {
+            List<string> returnList = new List<string>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                returnList.Add(OutputStr(list[i].Vorname + " " + list[i].Name, GetLongestNameLenght(list)) + " [" + list[i].Klasse + "]");
+            }
+
+            return returnList;
         }
     }
 }
